@@ -16,7 +16,7 @@
 
 #### 2. 평가용 데이터 삽입
 
-  dataset/taskABSA/ 폴더안에 nikluge-sa-2022-test.jsonl 파일의 형태로 삽입
+  dataset/task_ABSA/ 폴더안에 nikluge-sa-2022-test.jsonl 파일의 형태로 삽입
   
   
 #### 3. 모델 다운로드
