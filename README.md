@@ -30,7 +30,7 @@
   
 #### 4. Inference 코드 실행
   <code>
-      bash.All.sh
+      bash All.sh
   </code>         쉘 스크립트 실행
 
 #### 5. 평가가 완료되면 final.jsonl 형태로 최종 저장된다.
