@@ -1,3 +1,5 @@
+# install requirements.txt
+pip install -r requirements.txt
 
 #T5 모델 inference
 cd models/T5
