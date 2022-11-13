@@ -190,7 +190,7 @@ def test_sentiment_analysis(args):
 
     
     model = model_ABSA(args, len(label_id_to_name), len(entity_tokenizer))
-    model.load_state_dict(torch.load(args.entity_property_model_path, map_location=device))
+    # model.load_state_dict(torch.load(args.entity_property_model_path, map_location=device))
     model.to(device)
     model.eval()
             
