@@ -6,15 +6,27 @@
 
 ## 최종 Inference 방법
    
-    
+#### 1. Anaconda 가상환경 생성
+<code>conda create –n [가상환경 이름] python=3.9.0</code>
 
 
-#### 1. 평가용 데이터 삽입
+
+<code>conda activate [가상환경 이름]</code>
+
+
+
+위 명령어를 터미널에 입력하여 가상환경을 생성 및 활성화한다.    
+
+
+
+
+
+#### 2. 평가용 데이터 삽입
 
   dataset/task_ABSA/ 폴더안에 nikluge-sa-2022-test.jsonl 파일의 형태로 삽입
   
   
-#### 2. 모델 다운로드
+#### 3. 모델 다운로드
 
   saved_model 폴더 경로 내에 모델을 다음과 같은 형태로 저장
   
@@ -27,7 +39,7 @@
   
   
   
-#### 3. Inference 코드 실행
+#### 4. Inference 코드 실행
   <code>
       bash All.sh
   </code>         쉘 스크립트 실행시
