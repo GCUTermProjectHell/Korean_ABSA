@@ -1,7 +1,5 @@
 import torch
 
-import pandas as pd
-
 from utils import jsonlload
 from torch.utils.data import TensorDataset
 
