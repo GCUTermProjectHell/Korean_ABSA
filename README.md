@@ -9,17 +9,16 @@
 <!-- <img width="447" alt="image" src="https://user-images.githubusercontent.com/90828283/201530754-843e0f47-a262-4e1b-a54b-bf8499c0d9a7.png"> -->
 
 
-#### 1. Anaconda 가상환경 생성
-<code>conda create –n [가상환경 이름] python=3.9.0</code>
+#### 1. docker 가상환경 생성
+<code>docker build -t gcu_tphell:1.0 .</code>
 
 
 
-<code>conda activate [가상환경 이름]</code>
+<code>docker run --ipc host --gpus all -it --name hell gcu_tphell:1.0</code>
 
 
 
-위 명령어를 터미널에 입력하여 가상환경을 생성 및 활성화한다.    
-
+위 명령어를 터미널에 입력하여 docker 생성 및 활성화한다.    
 
 
 
@@ -27,21 +26,9 @@
 
   dataset/task_ABSA/ 폴더안에 nikluge-sa-2022-test.jsonl 파일의 형태로 삽입
   
-  
-#### 3. 모델 다운로드
-
-  saved_model 폴더 경로 내에 모델을 다음과 같은 형태로 저장
-  
-  
-  
-  ![image](https://user-images.githubusercontent.com/87708360/201510274-8951f782-7ef7-43d4-9985-866b74230e76.png)
 
   
-  모델 다운 경로: https://gachonackr-my.sharepoint.com/:f:/g/personal/teryas_gachon_ac_kr/EiGJJYKoC7NBs7qj_V6chkIBcG3PUtZvOKhspakbs7WCDQ?e=ogBSAy
-  
-  
-  
-#### 4. Inference 코드 실행
+#### 3. Inference 코드 실행
   <code>
       bash All.sh
   </code>         쉘 스크립트 실행시
@@ -52,8 +39,18 @@
   
   
 
-#### 5. 평가가 완료되면 final.jsonl 형태로 최종 저장된다.  
+#### 4. 평가가 완료되면 final.jsonl 형태로 최종 저장된다.  
 
+
+
+
+#### Cont. 모델
+
+ 본 팀은 대회의 최종 결과의 inference 재현을 위한 모델들을 huggingface에 올려두었고,  
+ 최종 결과를 재현하는데 있어 평가의 편의성을 위하여 본 git 소스코드로부터 각 모델들이 자동적으로 다운받아지도록 설정하였다.  
+ 해당 모델들은 아래의 huggingface repository 안에 저장되어 있다.
+ 
+ https://huggingface.co/kimy1119
 
 
 
