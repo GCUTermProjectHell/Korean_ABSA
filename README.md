@@ -27,8 +27,14 @@
   dataset/task_ABSA/ 폴더안에 nikluge-sa-2022-test.jsonl 파일의 형태로 삽입
   
 
+
+#### 3. 모델 다운로드
+
+모델 다운로드 후 saved_model을 All.sh 와 같은 디렉토리에 위치시킨다.
+
+
   
-#### 3. Inference 코드 실행
+#### 4. Inference 코드 실행
   <code>
       bash All.sh
   </code>         쉘 스크립트 실행시
@@ -38,19 +44,12 @@
   requirements.txt 내의 패키지 설치 후 inference 및 앙상블 수행
   
   
+  
 
-#### 4. 평가가 완료되면 final.jsonl 형태로 최종 저장된다.  
+#### 5. 평가가 완료되면 final.jsonl 형태로 최종 저장된다.  
 
 
 
-
-#### Cont. 모델
-
- 본 팀은 대회의 최종 결과의 inference 재현을 위한 모델들을 huggingface에 올려두었고,  
- 최종 결과를 재현하는데 있어 평가의 편의성을 위하여 본 git 소스코드로부터 각 모델들이 자동적으로 다운받아지도록 설정하였다.  
- 해당 모델들은 아래의 huggingface repository 안에 저장되어 있다.
- 
- https://huggingface.co/kimy1119
 
 
 
