@@ -34,7 +34,9 @@
   
   
   
-  requirements.txt 내의 패키지 설치 후 inference 수행
+  requirements.txt 내의 패키지 설치 후 inference 및 앙상블 수행
+  
+  
 
 #### 4. 평가가 완료되면 final.jsonl 형태로 최종 저장된다.
 
