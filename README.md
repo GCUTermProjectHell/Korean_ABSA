@@ -30,8 +30,8 @@
 
 #### 3. 모델 다운로드
 
-모델 다운로드 후 saved_model을 All.sh 와 같은 디렉토리에 위치시킨다.
-
+모델 다운로드 후 압축 해제하여 saved_model 폴더를 All.sh 와 같은 디렉토리에 위치시킨다.
+https://drive.google.com/file/d/1s8qriUESwZzu4F9a0n_pMQ4D3xyQoh6r/view?usp=share_link
 
   
 #### 4. Inference 코드 실행
