@@ -1,8 +1,22 @@
-# Korean_ABSA
-2022 국립국어원 인공 지능 언어 능력 평가 Team GCU_텀프지옥입니다
-
 ## 대회 개요
-과제에서 사용하는 말뭉치는 국립국어원이 구축한 '속성 기반 감성 분석' 말뭉치입니다. 속성 기반 감성 분석이란 언어에 나타난 개체의 속성 정보에 대한극성을 분류하는 과제입니다. 참가팀은 입력 문장에 대해 (1) 속성범주 (예: 제춤 전체#인지도)와 (2) 감성 (긍정/부정/중립)의 쌍을 추출하고, 정답 튜플과 예측된 튜플과의 비교를 통해 계산된 F1점수로 참가팀의 인공지능 모델의 성능을 평가합니다.
+
+<div align="center">
+  <p>2022 국립국어원 인공 지능 언어 능력 평가 Team GCU_텀프지옥입니다</p>
+  <img src="https://github.com/GCUTermProjectHell/Korean_ABSA/assets/87708360/08a7ea1f-9076-4975-8413-32dcec59f31a" width="550" style="border: 10px;" />
+</div>
+
+
+
+사용되는 Dataset은 국립국어원이 쇼핑 리뷰를 기반으로 구축한 '속성 기반 감성 분석' 말뭉치입니다. 이 대회는 속성 기반 감성 분석(ABSA)을 수행하는 모델을 구현하는 과제입니다.
+
+>1. 속성 범주 (예: 제춤 전체#인지도)
+>2. 감성 (긍정/부정/중립)
+
+참가팀은 입력된 문장에 대해 위의 속성 범주와 감성을 추출하고, 정답 튜플과 예측된 튜플을 비교하여 계산된 F1 점수를 통해 인공지능 모델의 성능을 평가합니다.
+
+
+
+
 
 ## 최종 Inference 방법
 
@@ -53,7 +67,7 @@ https://drive.google.com/file/d/1s8qriUESwZzu4F9a0n_pMQ4D3xyQoh6r/view?usp=share
 
 
 
-# 데이터 분석 및 추가,증강
+## 데이터 분석 및 추가,증강
 
  ![image](https://user-images.githubusercontent.com/90828283/201529728-c976f302-663a-4675-8369-1ca00c5faa73.png)
 
@@ -75,7 +89,7 @@ https://drive.google.com/file/d/1s8qriUESwZzu4F9a0n_pMQ4D3xyQoh6r/view?usp=share
  하지만 test 데이터셋에는 단 한개도 포함되지 않음)
 
 
- # 모델 1) kykim/Electra
+ ## 모델 1) kykim/Electra
  kykim/electra-kor-base: https://github.com/kiyoungkim1/LMkor
  - 국내 주요 커머스 리뷰 1억개 + 블로그 형 웹사이트 2000만개 (75GB)
  - 모두의 말뭉치 (18GB)
@@ -92,7 +106,7 @@ https://drive.google.com/file/d/1s8qriUESwZzu4F9a0n_pMQ4D3xyQoh6r/view?usp=share
 
  ![image](https://user-images.githubusercontent.com/90828283/201529418-202f7078-6fb1-492f-b18f-0e26b4e51bfa.png)
 
- # 모델 2) paust/pko-t5-large
+ ## 모델 2) paust/pko-t5-large
  paust/pko-t5-large: https://huggingface.co/paust/pko-t5-base  
  한국어 데이터 (나무위키, 위키피디아, 모두의 말뭉치)를 T5의 span corruption task를 사용해서 unsupervised learning한 사전학습 모델  
 
@@ -112,7 +126,7 @@ https://drive.google.com/file/d/1s8qriUESwZzu4F9a0n_pMQ4D3xyQoh6r/view?usp=share
 
  ![image](https://user-images.githubusercontent.com/90828283/201529530-0dff0751-fd86-42f4-9407-1efc3f8fb3c8.png)
 
- # 모델 Ensemble
+ ## 모델 Ensemble
 
  Voting 통해 ACD (entity 분류) 후, 최종적으로 ensemble된 ACD에 ASC를 inference하여 최종본으로 제출  
  (본 팀은 이번 대회의 task는 결국 entity classficiationd에서 당락이 결정될 것으로 판단했다)
